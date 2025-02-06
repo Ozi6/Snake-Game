@@ -77,6 +77,7 @@
         for (uint y = 0; y <= height; y++)
         {
             Console.Write("#");
+            Console.ResetColor();
             for (uint x = 0; x <= width; x++)
             {
                 if (snake.First.Value.x == x && snake.First.Value.y == y)
@@ -95,10 +96,7 @@
                     Console.Write("*");
                 }
                 else
-                {
-                    Console.ResetColor();
                     Console.Write(".");
-                }
             }
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("#");
